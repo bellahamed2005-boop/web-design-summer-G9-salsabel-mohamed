@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            background-color: #ffffff;
+        }
+
+        .blogs-section {
+            padding: 55px 20px 25px;
+        }
+
+        .blogs-section h1 {
+            text-align: center;
+            color: darkblue;
+            font-size: 34px;
+            margin-bottom: 8px;
+        }
+
+        .blogs-container {
+            width: 80%;
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .blog-card {
+            width: 33.333%;
+            background-color: white;
+            border: 1px solid #dddddd;
+            box-shadow: 0 2px 7px rgba(0, 0, 0, 0.15);
+            transition: 0.3s;
+        }
+
+
+
+        .blog-card img {
+            display: block;
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .blog-content {
+            padding: 15px 16px 18px;
+        }
+
+        .blog-content h2 {
+            color: #278a83;
+            font-size: 23px;
+            margin-bottom: 10px;
+        }
+
+        .blog-content p {
+            color: #999999;
+            font-size: 16px;
+            line-height: 1.35;
+            margin-bottom: 10px;
+        }
+
+        .blog-content a {
+            display: inline-block;
+            color: #999999;
+            font-size: 16px;
+            text-decoration: none;
+            padding: 7px 14px;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .information-section {
+            margin-top: 5px;
+            padding: 35px 20px 45px;
+            background-color: #eeeeee;
+        }
+
+        .information-container {
+            width: 80%;
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 55px;
+        }
+
+        .information-box {
+            width: 32%;
+            min-height: 115px;
+            padding: 25px 22px;
+            background-color: white;
+            border: 2px solid #222222;
+            display: flex;
+            align-items: center;
+            transition: 0.3s;
+        }
+
+        .information-box p {
+            color: #222222;
+            font-size: 15px;
+            line-height: 1.25;
+        }
+         
+    </style>
+</head>
+
+<body>
+
+    <section class="blogs-section">
+        <h1>Blogs</h1>
+
+        <div class="blogs-container">
+
+            <div class="blog-card">
+                <img src="https://picsum.photos/id/1018/600/350" alt="Nature">
+                <div class="blog-content">
+                    <h2>Lorem ipsum dolor sit amet.</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                        Pariatur explicabo corrupti fugit iusto, harum vitae
+                        officiis nihil perferendis iure. Asperiores.
+                    </p>
+                    <a href="#">Read more</a>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <img src="https://picsum.photos/id/1015/600/350" alt="Nature">
+                <div class="blog-content">
+                    <h2>Lorem ipsum dolor sit amet.</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                        Pariatur explicabo corrupti fugit iusto, harum vitae
+                        officiis nihil perferendis iure. Asperiores.
+                    </p>
+                    <a href="#">Read more</a>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <img src="https://picsum.photos/id/1016/600/350" alt="Nature">
+                <div class="blog-content">
+                    <h2>Lorem ipsum dolor sit amet.</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                        Pariatur explicabo corrupti fugit iusto, harum vitae
+                        officiis nihil perferendis iure. Asperiores.
+                    </p>
+                    <a href="#">Read more</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="information-section">
+        <div class="information-container">
+
+            <div class="information-box">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Consequuntur saepe, qui ducimus nisi doloribus at ratione
+                    totam dolore. Rem, ea.
+                </p>
+            </div>
+
+            <div class="information-box">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Consequuntur saepe, qui ducimus nisi doloribus at ratione
+                    totam dolore. Rem, ea.
+                </p>
+            </div>
+
+            <div class="information-box">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Consequuntur saepe, qui ducimus nisi doloribus at ratione
+                    totam dolore. Rem, ea.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
