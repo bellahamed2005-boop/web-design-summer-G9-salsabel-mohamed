@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Registration Form</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .form-container {
+            width: 100%;
+            max-width: 650px;
+            margin: auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-top: 0;
+            text-align: center;
+        }
+
+        fieldset {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 2px solid #777;
+            border-radius: 7px;
+        }
+
+        legend {
+            padding: 0 10px;
+            font-weight: bold;
+        }
+
+        .form-group {
+            margin-bottom: 17px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: #333;
+            outline: none;
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .inline-options label {
+            display: inline-block;
+            margin-right: 18px;
+            font-weight: normal;
+        }
+
+        .inline-options input {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        input[type="range"] {
+            padding: 0;
+        }
+
+        input[type="submit"] {
+            cursor: pointer;
+            border: none;
+            color: white;
+            background-color: #222;
+            font-weight: bold;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #444;
+        }
+
+        small {
+            display: block;
+            margin-top: 5px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+
+        <h1>Registration Form</h1>
+
+        <form action="#" method="post" enctype="multipart/form-data" autocomplete="off">
+
+            <fieldset>
+                <legend>Search</legend>
+
+                <label for="search">Search:</label>
+
+                <input
+                    type="search"
+                    id="search"
+                    name="search"
+                    placeholder="Type to search..."
+                    autocomplete="off"
+                >
+            </fieldset>
+
+            <div class="form-group">
+                <label for="first-name">First Name:</label>
+
+                <input
+                    type="text"
+                    id="first-name"
+                    name="first_name"
+                    placeholder="Enter your first name"
+                    pattern="[A-Za-z\u0600-\u06FF ]+"
+                    title="First name must contain letters only"
+                    autocomplete="off"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="last-name">Last Name:</label>
+
+                <input
+                    type="text"
+                    id="last-name"
+                    name="last_name"
+                    placeholder="Enter at least 5 characters"
+                    minlength="5"
+                    autocomplete="off"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="mobile">Mobile Number:</label>
+
+                <input
+                    type="tel"
+                    id="mobile"
+                    name="mobile"
+                    placeholder="01012345678"
+                    pattern="01[0125][0-9]{8}"
+                    minlength="11"
+                    maxlength="11"
+                    inputmode="numeric"
+                    title="Enter 11 numbers starting with 010, 011, 012 or 015"
+                    autocomplete="off"
+                    required
+                >
+
+                <small>
+                    Must start with 010, 011, 012 or 015.
+                </small>
+            </div>
+            
+            <div class="form-group">
+                <label for="course">Choose a Course:</label>
+
+                <input
+                    type="text"
+                    id="course"
+                    name="course"
+                    list="courses-list"
+                    placeholder="Search for a course..."
+                    autocomplete="off"
+                    required
+                >
+
+                <datalist id="courses-list">
+                    <option value="HTML">
+                    <option value="CSS">
+                    <option value="JavaScript">
+                    <option value="Bootstrap">
+                    <option value="React">
+                    <option value="Angular">
+                    <option value="Vue.js">
+                    <option value="PHP">
+                    <option value="Laravel">
+                    <option value="Python">
+                </datalist>
+            </div>
+
+            <div class="form-group">
+                <label for="profile-image">Upload PNG Image:</label>
+
+                <input
+                    type="file"
+                    id="profile-image"
+                    name="profile_image"
+                    accept=".png,image/png"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="comment">Comment:</label>
+
+                <textarea
+                    id="comment"
+                    name="comment"
+                    placeholder="Write your comment..."
+                    autocomplete="off"
+                    required
+                ></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="birth-date">Date of Birth:</label>
+
+                <input
+                    type="date"
+                    id="birth-date"
+                    name="birth_date"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label>Gender:</label>
+
+                <div class="inline-options">
+                    <label for="male">
+                        <input
+                            type="radio"
+                            id="male"
+                            name="gender"
+                            value="male"
+                            required
+                        >
+                        Male
+                    </label>
+
+                    <label for="female">
+                        <input
+                            type="radio"
+                            id="female"
+                            name="gender"
+                            value="female"
+                        >
+                        Female
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Tracks:</label>
+
+                <div class="inline-options">
+                    <label for="front-end">
+                        <input
+                            type="checkbox"
+                            id="front-end"
+                            name="tracks[]"
+                            value="front-end"
+                            checked
+                        >
+                        Front-End
+                    </label>
+
+                    <label for="back-end">
+                        <input
+                            type="checkbox"
+                            id="back-end"
+                            name="tracks[]"
+                            value="back-end"
+                        >
+                        Back-End
+                    </label>
+
+                    <label for="full-stack">
+                        <input
+                            type="checkbox"
+                            id="full-stack"
+                            name="tracks[]"
+                            value="full-stack"
+                        >
+                        Full-Stack
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="range">
+                    Range:
+                    <output id="range-value">10</output>
+                </label>
+
+                <input
+                    type="range"
+                    id="range"
+                    name="range"
+                    min="10"
+                    max="100"
+                    value="10"
+                    step="1"
+                    oninput="document.getElementById('range-value').value = this.value"
+                >
+            </div>
+
+            <input
+                type="submit"
+                name="submit"
+                value="Submit"
+            >
+
+        </form>
+
+    </div>
+
+</body>
+</html>
