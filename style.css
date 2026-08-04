@@ -53,12 +53,12 @@ body {
     letter-spacing: 3px;
 }
 
-/* الصورة تتحرك لفوق وشمال */
+
 .card:hover img {
     transform: translate(-30px, -30px);
 }
 
-/* المعلومات تظهر من تحت */
+
 .card:hover .card-info {
     opacity: 1;
     visibility: visible;
